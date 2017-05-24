@@ -160,7 +160,7 @@ class Contact extends Component {
          */
         return (
           <div className="contact">
-            <div id="form1" >
+            <div >
             <form>
             <input id="fullName" className="fullName"
               type="text" placeholder="Full Name"

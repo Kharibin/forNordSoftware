@@ -68,7 +68,7 @@ input {
   width:80px;
   border: none;
   background-color: #f1f1f1;
-  margin-left: 26px;
+  margin-left: 12px;
   display: inline-block;
   line-height: 40px;
   text-align: center;
@@ -90,7 +90,7 @@ input {
   width:80px;
   border: none;
   background-color: #f1f1f1;
-  margin-left: 10px;
+  margin-left: 7px;
   display: inline-block;
   line-height: 40px;
   text-align: center;
@@ -102,7 +102,6 @@ input {
   border: none;
   background-color: #07f;
   color: #ffffff;
-  margin-left: 10px;
   display: inline-block;
   line-height: 40px;
   text-align: center;
@@ -118,7 +117,6 @@ input {
   fill:#909090;
   width:24px;
   height:24px;
-  border: 2px solid #ffffff;
   display: inline-block;
 }
 
@@ -152,7 +150,7 @@ input {
 
 .contact {
   background-color: #ffffff;
-  width: 912px;
+  width: 864px;
   margin: auto;
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #f1f1f1;
@@ -160,45 +158,36 @@ input {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  vertical-align:middle;
+  padding: 24px;
 }
 
 .nameCol {
   width:160px;
-  vertical-align:middle;
-  padding-left: 24px;
   display: inline-block;
-}
-
-.freeCol {
-  width:16px;
 }
 
 .mailCol {
   width:275px;
-  vertical-align:middle;
+  margin-left: 15px;
   display: inline-block;
 }
 
 .phoneCol {
   width:195px;
-  vertical-align:middle;
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 .editCol {
   width: 40;
-  vertical-align:middle;
-  height: 72px;
   display: inline-block;
+  margin-left: 110px;
 }
 
 .deleteCol {
   width: 40;
-  vertical-align:middle;
   display: inline-block;
-  height: 72px;
+  margin-left: 30px;
 }
 
 
