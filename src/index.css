@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f1f1f1;
+}
+
+.Header {
+    background-color: #adb5bd;
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-bottom: 32px;
+    color: #ffffff;
+    font-size: 40px;
+    width: 100%;
+}
+
+.fullName {
+  width: 160px;
+}
+
+#nameSorter {
+  width: 160px;
+}
+
+.email {
+  width: 275px;
+}
+
+#emailSorter {
+  width: 275px;
+}
+
+.phone {
+  width: 195px;
+}
+
+#phoneSorter {
+  width: 195px;
+}
+
+input {
+  border-style: hidden;
+  height: 40px;
+  margin-right: 16px;
+  border: 1px solid #eeeeee;
+}
+
+#addUserButton{
+  height: 40px;
+  float: right;
+  width:120px;
+  border: none;
+  background-color: #f1f1f1;
+}
+
+#addUserButton:hover{
+  height: 40px;
+  float: right;
+  width:120px;
+  border: none;
+  background-color: #07f;
+  color: #ffffff;
+}
+
+#cancelButton{
+  height: 40px;
+  width:80px;
+  border: none;
+  background-color: #f1f1f1;
+}
+
+#cancelButton:hover{
+  height: 40px;
+  width:80px;
+  border: none;
+  background-color: #07f;
+  color: #ffffff;
+}
+
+#saveButton{
+  height: 40px;
+  width:80px;
+  border: none;
+  background-color: #f1f1f1;
+  margin-left: 10px;
+}
+
+#saveButton:hover{
+  height: 40px;
+  width:80px;
+  border: none;
+  background-color: #07f;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.editDelete{
+  fill:#909090;
+  width:24px;
+  height:24px;
+}
+.editDelete:hover{
+  fill:#909090;
+  width:24px;
+  height:24px;
+  border: 2px solid #ffffff;
+}
+
+#form1 {
+  background-color: #ffffff;
+  width: 880px;
+  margin: auto;
+  padding: 16px;
+}
+
+.SorterDiv {
+  background-color: #ffffff;
+  width: 880px;
+  margin: auto;
+  border-top: 10px solid #f1f1f1;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 4px solid #f1f1f1;
+}
+
+.Sorter {
+  background-color: #ffffff;
+  color: #757575;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  text-align: left;
+  margin-right: 17px;
+  border: none;
+}
+
+.contact {
+  background-color: #ffffff;
+  width: 912px;
+  margin: auto;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  color: #505050;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  vertical-align:middle;
+}
+
+.nameCol {
+  width:160px;
+  vertical-align:middle;
+  padding-left: 24px;
+}
+
+.freeCol {
+  width:16px;
+}
+
+.mailCol {
+  width:275px;
+  vertical-align:middle;
+}
+
+.phoneCol {
+  width:195px;
+  vertical-align:middle;
+}
+
+.editCol {
+  width: 70;
+  vertical-align:middle;
+  height: 72px;
+}
+
+.deleteCol {
+  width: 70;
+  vertical-align:middle;
+}
+
+
+.mainPage {
+  width: 912px;
+  margin: auto;
+  color: #757575;
+  margin-top: 50px;
+}
