@@ -4,13 +4,17 @@ import Forma from './Forma';
 import Contact from './Contact';
 import Sorter from './Sorter';
 
+/**
+ * [contactList description]
+ * @type {Array}
+ */
 
 var contactList = [
   {
     id : 1,
-    fullNameValue : 'Vasya',
-    emailValue : 'Vasya@gml.com',
-    phoneNumberValue : '891812313'
+    fullNameValue : 'Andrey Kharybin',
+    emailValue : 'ai.kharybin@gmail.com',
+    phoneNumberValue : '0449500713'
   },
   {
     id : 2,
@@ -29,7 +33,10 @@ var contactList = [
 
 
 
-
+/**
+ * [state description]
+ * @type {Object}
+ */
 
 class App extends Component{
     constructor() {
@@ -40,6 +47,14 @@ class App extends Component{
       }
     }
 
+/**
+ * [addContact description]
+ * @param {[type]} contact [description]
+ * @param {[type]} id      [description]
+ *
+ * update current contacts Array with new contact
+ * added in ./Forma.js and also increments id counter
+ */
     addContact(contact, id){
       this.setState({currentId: ++id});
       let contacts = this.state.contacts;
@@ -47,7 +62,14 @@ class App extends Component{
       contacts.push(contact);
       this.setState({contacts : contacts});
     }
-
+/**
+ * [updateContacts description]
+ * @param  {[type]} contactsU [description]
+ * @return {[type]}           [description]
+ *
+ * Upddate current conacts Array according to sorting
+ * in ./Sorter.js
+ */
     updateContacts(contactsU){
       console.log(contactsU);
       let contacts2 = contactsU;

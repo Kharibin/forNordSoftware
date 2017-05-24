@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
 
+/**
+ * [Sorter description]
+ * @type {Object}
+ *
+ * This comp is responsible for sorting our contacts table
+ */
+
 class Sorter extends Component{
   constructor(props) {
     super(props);
@@ -11,6 +18,14 @@ class Sorter extends Component{
     }
   }
 
+/**
+ * [render description]
+ * @return {[type]} [description]
+ *
+ * We just drawing our columns headers depening on current
+ * state and call functions to sort our contacts array and
+ * return it to ./App.js in sortByName callback func.
+ */
     render() {
         return (
             <div className="SorterDiv">
@@ -29,6 +44,18 @@ class Sorter extends Component{
             </div>
         );
     }
+
+    /**
+     * [sortByName description]
+     * @param  {[type]} event [description]
+     * @return {[type]}       [description]
+     *
+     * the same construction for all columns, so we are
+     * setting *Sorted field to oe of the following states:
+     * 0 - not sorted by this param
+     * 1 - sorted ascending
+     * 2 - sorted descending
+     */
 
     sortByName(event) {
       event.preventDefault();

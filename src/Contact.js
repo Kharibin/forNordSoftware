@@ -1,5 +1,14 @@
 import React, {Component} from 'react';
 
+/**
+ * [Contact comp description]
+ * @type {Object}
+ *
+ * largest component wich provides components
+ * table rendering, also contains functions
+ * for turning on edit state of contact
+ * and implemnts "fake" contact deleting
+ */
 
 
 class Contact extends Component {
@@ -14,6 +23,13 @@ class Contact extends Component {
     }
   }
 
+/**
+ * [setEditable description]
+ * @param {[type]} contact [description]
+ * we are setting contact with current id
+ * to "edit" mode, also setting default
+ * editing forms values
+ */
   setEditable(contact){
     this.setState({
       fullNameValue:contact.fullNameValue,
@@ -24,6 +40,17 @@ class Contact extends Component {
     console.log('id to edit', contact.id)
   }
 
+  /**
+   * [fakeDel description]
+   * @param  {[type]} id         [description]
+   * @param  {[type]} deletedIds [description]
+   * @return {[type]}            [description]
+   *
+   * Here we are adding id of item we want to delete
+   * to deletedIds array, wich will be checked in render func
+   */
+
+
   fakeDel(id, deletedIds){
     console.log(deletedIds);
     let fakeDeleted = deletedIds;
@@ -31,10 +58,17 @@ class Contact extends Component {
     this.setState({deletedIds: fakeDeleted});
   }
 
-  getIdToEdit(){
-    console.log('id to edit', this.state.toEdit)
-  }
 
+/**
+ * [nameChange description]
+ * @param  {[type]} event   [description]
+ * @param  {[type]} contact [description]
+ * @return {[type]}         [description]
+ *
+ * Simple functions to update current  state
+ * of editing forms
+ *
+ */
   nameChange(event, contact){
     this.setState({fullNameValue: event.target.value})
     console.log("value changed", this);
@@ -47,11 +81,20 @@ class Contact extends Component {
 
   phoneChange(event){
     this.setState({phoneNumberValue: event.target.value})
-    console.log("value changed", this);
   }
 
+  /**
+   * [editUser description]
+   * @param  {[type]} contact [description]
+   * @param  {[type]} save    [description]
+   * @return {[type]}         [description]
+   *
+   * function for validating edited contacts
+   * params and choosing update them or not
+   * using save argument (bool)
+   */
+
   editUser(contact, save) {
-        console.log('zashel kontakt',contact);
         let contactNative = contact;
         if (save){
         let mailChecker = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
@@ -90,9 +133,31 @@ class Contact extends Component {
       }
   }
 
+/**
+ * [editOrNot description]
+ * @param  {[type]} contact [description]
+ * @param  {[type]} index   [description]
+ * @return {[type]}         [description]
+ *
+ * checks if our contact deleted or not,
+ * if deleted we just passing null value
+ * to render func.
+ * checks if this contact is contact to edit
+ *
+ * responsible for rendered view of contact
+ */
+
     editOrNot(contact , index){
       if (this.state.deletedIds.indexOf(contact.id) != -1) return null;
       if (contact.id === this.state.toEdit){
+
+        /**
+         * [description]
+         * @param  {[type]} div [description]
+         * @return {[type]}     [description]
+         *
+         * the way "edit mode" looks like
+         */
         return (
           <div className="contact">
             <div id="form1" >
@@ -119,8 +184,11 @@ class Contact extends Component {
           </div>
         );
       }
-      else return (
 
+      /**
+       *The way standart contact represnted in browser
+       */
+      else return (
               <table className="contact" key={'contact' + contact.id + index}>
               <tbody>
                 <tr>

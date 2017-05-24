@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
 
-
+/**
+ * [state description]
+ * @type {Object}
+ *
+ * This component response for adding new contact
+ * to our contact list, and for validating params of new
+ * contact
+ */
 
 class Forma extends Component{
     constructor(props) {
@@ -13,6 +20,12 @@ class Forma extends Component{
       }
     }
 
+/**
+ * [render description]
+ * @return {[type]} [description]
+ *
+ *
+ */
 
     render() {
         return (
@@ -39,6 +52,15 @@ class Forma extends Component{
         );
     }
 
+    /**
+     * [AddNewUser description]
+     * @param {[type]} event [description]
+     *
+     * Here we are checking all params of new contact
+     * (used simple regexp compare) and returning it via
+     * callback addContact func.
+     */
+
     AddNewUser(event){
       event.preventDefault();
       let mailChecker = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
@@ -59,6 +81,14 @@ class Forma extends Component{
       else {console.log('invalid name for new user')};
     }
 
+
+/**
+ * [nameChange description]
+ * @param  {[type]} event [description]
+ * @return {[type]}       [description]
+ *
+ * block of simple state updaters
+ */
     nameChange(event){
       this.setState({fullNameValue: event.target.value})
       console.log("value changed", this);
@@ -73,21 +103,6 @@ class Forma extends Component{
       this.setState({phoneNumberValue: event.target.value})
       console.log("value changed", this);
     }
-
-
-    getName(){
-      return this.getState(this.state.fullNameValue);
-    }
-
-    getMail(){
-      return this.getState(this.state.emailValue);
-    }
-
-    getPhone(){
-      return this.getState(this.state.phoneNumberValue);
-    }
-
-
 
 }
 
