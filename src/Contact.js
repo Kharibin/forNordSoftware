@@ -178,7 +178,7 @@ class Contact extends Component {
               defaultValue={contact.phoneNumberValue}>
             </input>
             <div id="cancelButton" onClick={this.editUser.bind(this, contact, 0)}>Cancel</div>
-            <div id="saveButton" onClick={this.editUser.bind(this, contact, 1)}>Save</div>
+            <div id="saveButton" onClick={this.editUser.bind(this, contact, 1)}>Save </div>
             </form>
             </div>
           </div>
@@ -189,28 +189,19 @@ class Contact extends Component {
        *The way standart contact represnted in browser
        */
       else return (
-              <table className="contact" key={'contact' + contact.id + index}>
-              <tbody>
-                <tr>
-                  <td className="nameCol">{contact.fullNameValue}</td>
-                  <td className="freeCol"></td>
-                  <td className="mailCol">{contact.emailValue}</td>
-                  <td className="freeCol"></td>
-                  <td className="phoneCol">{contact.phoneNumberValue}</td>
-                  <td className="freeCol"></td>
-                  <td className="editCol">
+              <div className="contact" key={'contact' + contact.id + index}>
+                  <div className="nameCol">{contact.fullNameValue}</div>
+                  <div className="mailCol">{contact.emailValue}</div>
+                  <div className="phoneCol">{contact.phoneNumberValue}</div>
+                  <div className="editCol">
                     <img className="editDelete" src={require('./pic/edit.png')}
-                      alt="" height="24px" width="24px"
-                      onClick={this.setEditable.bind(this, contact)}
-                    /></td>
-                  <td className="deleteCol">
+                      onClick={this.setEditable.bind(this, contact)}/>
+                    </div>
+                  <div className="deleteCol">
                       <img className="editDelete" src={require('./pic/delete.png')}
-                      alt="" height="24px" width="24px"
-                      onClick={this.fakeDel.bind(this, contact.id, this.state.deletedIds)}
-                  /></td>
-                </tr>
-              </tbody>
-              </table>
+                      onClick={this.fakeDel.bind(this, contact.id, this.state.deletedIds)}/>
+                  </div>
+              </div>
       );
     }
 

@@ -68,6 +68,10 @@ input {
   width:80px;
   border: none;
   background-color: #f1f1f1;
+  margin-left: 26px;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
 }
 
 #cancelButton:hover{
@@ -76,6 +80,9 @@ input {
   border: none;
   background-color: #07f;
   color: #ffffff;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
 }
 
 #saveButton{
@@ -84,6 +91,9 @@ input {
   border: none;
   background-color: #f1f1f1;
   margin-left: 10px;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
 }
 
 #saveButton:hover{
@@ -93,18 +103,23 @@ input {
   background-color: #07f;
   color: #ffffff;
   margin-left: 10px;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
 }
 
 .editDelete{
   fill:#909090;
   width:24px;
   height:24px;
+  display: inline-block;
 }
 .editDelete:hover{
   fill:#909090;
   width:24px;
   height:24px;
   border: 2px solid #ffffff;
+  display: inline-block;
 }
 
 #form1 {
@@ -152,6 +167,7 @@ input {
   width:160px;
   vertical-align:middle;
   padding-left: 24px;
+  display: inline-block;
 }
 
 .freeCol {
@@ -161,22 +177,28 @@ input {
 .mailCol {
   width:275px;
   vertical-align:middle;
+  display: inline-block;
 }
 
 .phoneCol {
   width:195px;
   vertical-align:middle;
+  display: inline-block;
+  margin-left: 30px;
 }
 
 .editCol {
-  width: 70;
+  width: 40;
   vertical-align:middle;
   height: 72px;
+  display: inline-block;
 }
 
 .deleteCol {
-  width: 70;
+  width: 40;
   vertical-align:middle;
+  display: inline-block;
+  height: 72px;
 }
 
 
